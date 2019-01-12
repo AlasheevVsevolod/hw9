@@ -15,16 +15,6 @@ namespace Base_Lesson_9
             //Lesson.Lesson.DeconstructExample();
             
             Console.ReadLine();
-
         }
-
-
-        public class Song
-        {
-            public string Name;
-            public int Duration;
-        }
-
-
     }
 }
