@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Base_Lesson_9.Extensions;
+
 
 namespace Base_Lesson_9.Practice
 {
@@ -16,8 +18,8 @@ namespace Base_Lesson_9.Practice
         /// </summary>
         public static void L9_P_EX_1_from_2()
         {
-            var coordinate1 = new Coordinates {a = 1, b = 2, c = 3 };
-            var (_, _, _, result) = coordinate1;
+            var coord1 = new Coordinates {a = 1, b = 2, c = 3 };
+            var (_, _, _, result) = coord1;
             Console.WriteLine(result);
         }
 
@@ -29,7 +31,7 @@ namespace Base_Lesson_9.Practice
                 a = this.a;
                 b = this.b;
                 c = this.c;
-                vector = Math.Sqrt(a*a + b*b + c*c);
+                vector = Math.Sqrt(a^2 + b^2 + c^2);
             }
         }
 
@@ -42,7 +44,10 @@ namespace Base_Lesson_9.Practice
         /// </summary>
         public static void L9_P_EX_2_from_2()
         {
+            var tmpDateTime = DateTime.Now;
 
+            var (_, _, _, h, min, sec) = tmpDateTime;
+            Console.WriteLine($"Current time {h:d2}:{min:d2}:{sec:d2}");
         }
     }
 }
